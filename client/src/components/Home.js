@@ -27,7 +27,7 @@ function Home() {
 
         }
         await socket.emit("send_message", messageData)
-        setMessageList(list => [...list, messageData])
+        // setMessageList(list => [...list, messageData])
         console.log(messageData)
         setMessageInput('')
         // console.log(socket.id)
@@ -63,10 +63,14 @@ function Home() {
     <div className="joinChatContainer">
 
       <div style={{display: 'flex', justifyContent: "right"}}>
-        <button className='btn btn-primary' onClick={handleLogout} >Logout</button>
+      <h6>Join a Chat</h6>
+
+        <button className='btn btn-primary' style={{padding: 0}} onClick={handleLogout} >Logout</button>
       </div>
 
-      <h3>Join a Chat</h3>
+      
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+      <div style={{display: 'flex'}}>
       <input
             type="text"
             placeholder="John..."
@@ -83,6 +87,7 @@ function Home() {
               setRoom(event.target.value);
             }}
           />
+      </div>
       <button onClick = {joinRoom}>Join Room</button>
 
 
@@ -112,7 +117,7 @@ function Home() {
           })}
         </ScrollToBottom>
       </div>
-      <div className="chat-footer" style={{marginTop: 0}}>
+      <div className="chat-footer">
         <input
           type="text"
           value={messageInput}
@@ -127,6 +132,7 @@ function Home() {
         <button onClick={sendMessage}>&#9658;</button>
       </div>
     </div>
+      </div>
 
 
     </div>

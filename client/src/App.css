@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -197,6 +198,14 @@
   outline: none;
   font-size: 25px;
   color: lightgray;
+}
+.chat-footer{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
 }
 
 .chat-window .chat-footer button:hover {

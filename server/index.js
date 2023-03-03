@@ -49,6 +49,6 @@ app.use(cookieParser())
 app.use('/user', userRouter)
 
 
-app.listen(3001, (port) =>{
+app.listen(port = 3001, () =>{
     console.log(`server is running on port ${port}`)
 })
